@@ -1,11 +1,9 @@
-import Link from 'next/link';
 import getProducts from './lib/getProducts';
 import {addProductToDatabase} from './actions/serverActions';
 export default async function Home() {
   const products = await getProducts();
   return (
-    <main className="bg-green-100">
-      <Link href='/users' className="bg-white hover:bg-blue-600">Go to users page</Link>
+    <main>
       {/* block max-w-sm rounded-md p-d m-6 */}
       <div> 
         <h1 className='text-2xl text-center font-bold'>Product Details</h1>
