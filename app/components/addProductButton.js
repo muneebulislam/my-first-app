@@ -1,8 +1,6 @@
-'use client'
+"use client";
 function addProductButton() {
-  return (
-    <button>Add product</button>
-  )
+  return <button>Add product</button>;
 }
 
 export default addProductButton;
