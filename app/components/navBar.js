@@ -5,6 +5,7 @@ export default function NavBar() {
     <div className="flex flex-row gap-4 m-3 font-bold">
       <Link href="/users">Users</Link>
       <Link href="/">Home</Link>
+      <Link href="/products">Products</Link>
     </div>
   );
 }

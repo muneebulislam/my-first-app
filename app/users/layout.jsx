@@ -1,8 +1,10 @@
 export const metadata = {
-    title: 'Users Page',
-    description: 'Users page description',
-  }
-
+  title: {
+    default: 'Users',
+    template:'%s',
+  },
+    description: 'page for users'
+};
 export default function UsersLayout({ children }) {
   return (
     <>

@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import UserPosts from "./components/UserPosts";
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-
+import RemoveProduct from "@/app/components/RemoveProduct";
 
 export async function generateMetadata({params:{userId}}) {
     const userData = getUser(userId);
@@ -22,7 +22,7 @@ export async function generateMetadata({params:{userId}}) {
     title: user.name,
     description: `Page for ${user.description}`,
 
-  }
+  };
 }
 
 
@@ -37,8 +37,7 @@ export default async function UserPage({params:{userId}}) {
 
   return (
     <>
-    <Link href="/users" className="">Go back to users</Link>
-    <h2>{user.name}</h2>
+    <h1 className="font-bold text-center font-size-12 ">{user.name}</h1>
     <br/>
     <Suspense fallback={<h1>Loading...</h1>}>
     <UserPosts promise={userPostsData}/>
